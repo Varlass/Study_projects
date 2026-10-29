@@ -19,7 +19,7 @@ class Program
     }
 
     static double?
-    Check(string? raw_number)
+    Convert(string? raw_number)
     {
         if (double.TryParse(raw_number, out double number))
         {
@@ -27,7 +27,7 @@ class Program
         }
         else
         {
-            Console.WriteLine($"{raw_number} это не число.");
+            Console.WriteLine($"'{raw_number}' это не число.");
             return null;
         }
     }
@@ -37,7 +37,7 @@ class Program
     {
         Console.WriteLine("Введите первое число: ");
         string? raw_c_1 = Console.ReadLine();
-        double? c_1 = Check(raw_c_1);
+        double? c_1 = Convert(raw_c_1);
         if (c_1 == null)
         {
             return;
@@ -45,7 +45,7 @@ class Program
 
         Console.WriteLine("Введите второе число: ");
         string? raw_c_2 = Console.ReadLine();
-        double? c_2 = Check(raw_c_2);
+        double? c_2 = Convert(raw_c_2);
         if (c_2 == null)
         {
             return;

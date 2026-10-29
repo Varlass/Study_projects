@@ -18,7 +18,7 @@ def convert(raw_number: str) -> float|None:
         number: float = float(raw_number)
 
     except ValueError:
-        print(f"{raw_number} это не число.")
+        print(f"'{raw_number}' это не число.")
         return None
 
     return number
