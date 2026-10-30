@@ -1,24 +1,22 @@
-﻿// Работа Vitalii Prytchak
-
-class Program
+﻿class Program
 {
-    static (double, double)
+    private const double a_1 = 1;
+    private const double a_2 = 2;
+    private const double b_1 = 3;
+    private const double b_2 = 4;
+
+    private static (double, double)
     Calculate(double c_1, double c_2)
     {
-        double a_1 = 1;
-        double a_2 = 2;
-        double b_1 = 3;
-        double b_2 = 4;
-
         double d = a_1 * b_2 - a_2 * b_1;
 
-        double x = (c_1 * b_2 - a_2 * b_1) / d;
-        double y = (a_1 * c_2 - c_2 * c_1) / d;
+        double x = (c_1 * b_2 - c_2 * b_1) / d;
+        double y = (a_1 * c_2 - a_2 * c_1) / d;
 
         return (x, y);
     }
 
-    static double?
+    private static double?
     Convert(string? raw_number)
     {
         if (double.TryParse(raw_number, out double number))
@@ -32,7 +30,7 @@ class Program
         }
     }
 
-    static void
+    public static void
     Main()
     {
         Console.WriteLine("Введите первое число: ");
@@ -53,6 +51,6 @@ class Program
 
         (double x, double y) = Calculate(c_1.Value, c_2.Value);
 
-        Console.WriteLine($"\nРезультат:\nx = {x};\ny = {y};");
+        Console.WriteLine($"Результат при заранее заданных числах {a_1}, {a_2}, {b_1}, {b_2}:\n\n" + $"x = {x};\ny = {y};");
     }
 }
