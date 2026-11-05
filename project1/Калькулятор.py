@@ -1,9 +1,8 @@
-# Python мне привычнее, поэтому решил продублировать код на нём.
-
 a_1: float = 1
 a_2: float = 2
 b_1: float = 3
 b_2: float = 4
+
 
 def calculate(c_1: float, c_2: float) -> tuple[float, float]:
     d: float = a_1 * b_2 - a_2 * b_1
