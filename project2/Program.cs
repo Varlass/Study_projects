@@ -2,8 +2,7 @@
 {
     static Random random = new Random();
 
-    private static int[]
-    Task0()
+    private static int[] Task0()
     {
         int[] array = new int[10];
 
@@ -15,8 +14,7 @@
         return array;
     }
 
-    private static void
-    Task1(int[] array, string number)
+    private static void Task1(int[] array, string number)
     {   
         Console.WriteLine($"\x1b[33m1. Содержимое {number} массива:\x1b[0m");
 
@@ -28,8 +26,7 @@
         Console.Write("\n");
     }
 
-    private static double
-    Task2(int[] array)
+    private static double Task2(int[] array)
     {
         Console.WriteLine("\x1b[34m2. Среднее Арифметическое:\x1b[0m");
 
@@ -46,8 +43,7 @@
         return arithmetic_mean;
     }
 
-    private static int
-    Task3(int[] array, double arithmetic_mean)
+    private static int Task3(int[] array, double arithmetic_mean)
     {
         Console.WriteLine("\x1b[36m3. Чисел больше среднего арифметического:\x1b[0m");
 
@@ -66,8 +62,7 @@
         return quantity;
     }
 
-    private static int[]
-    Task4(int[] array, double arithmetic_mean, int quantity)
+    private static int[] Task4(int[] array, double arithmetic_mean, int quantity)
     {
         int[] new_array = new int[quantity];
         int new_array_index = 0;
@@ -84,8 +79,7 @@
         return new_array;
     }
 
-    private static void
-    Main()
+    private static void Main()
     {
         int[] array = Task0();
 
@@ -96,6 +90,5 @@
         Console.Write("\n");
         int[] new_array = Task4(array, arithmetic_mean, quantity);
         Task1(new_array, "второго");
-
     }
 }

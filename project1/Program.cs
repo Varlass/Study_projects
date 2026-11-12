@@ -5,8 +5,7 @@
     private const double b_1 = 3;
     private const double b_2 = 4;
 
-    private static (double, double)
-    Calculate(double c_1, double c_2)
+    private static (double, double) Calculate(double c_1, double c_2)
     {
         double d = a_1 * b_2 - a_2 * b_1;
 
@@ -16,8 +15,7 @@
         return (x, y);
     }
 
-    private static double?
-    Convert(string? raw_number)
+    private static double? Convert(string? raw_number)
     {
         if (double.TryParse(raw_number, out double number))
         {
@@ -30,8 +28,7 @@
         }
     }
 
-    public static void
-    Main()
+    public static void Main()
     {
         Console.WriteLine("Введите первое число: ");
         string? raw_c_1 = Console.ReadLine();
